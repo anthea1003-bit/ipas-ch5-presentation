@@ -369,8 +369,8 @@ function setExplainMode(on){
   quiz.querySelector('.feedback').hidden=!on;
  });
  const stage=document.querySelector('#names-stage'),reveal=document.querySelector('#name-reveal');
- stage.classList.toggle('is-named',on);reveal.setAttribute('aria-pressed',String(on));reveal.textContent=on?'回到空矩陣':'顯示四格名稱';
- waferStep=on?wafers.length:0;renderWafers();
+ stage.classList.remove('is-named');reveal.setAttribute('aria-pressed','false');reveal.textContent='顯示四格名稱';
+ waferStep=0;renderWafers();
  const button=document.querySelector('#mode-toggle');
  button.textContent=on?'切換為作答模式':'切換為解析模式';button.setAttribute('aria-pressed',String(on));
  document.documentElement.classList.toggle('explain-mode',on);
