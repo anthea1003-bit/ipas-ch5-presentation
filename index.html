@@ -7,7 +7,7 @@
 <link rel="icon" href="data:,">
 <title>抓到關鍵字之後：先算一下，再選答案</title>
 <style>
-:root{--type-body:17px;--type-small:17px;--type-micro:13px;--type-reading:20px;--type-svg-body:18px;--type-svg-label:14px;--type-title:clamp(42px,calc(52vw / 10),80px);--type-hero:clamp(58px,7vw,108px);--paper:#f7f6f1;--ink:#11110f;--muted:#62625a;--line:#d6d4cc;--soft:#ecebe5;--signal:#d7ff38;--green:#285447;--serif:"Iowan Old Style","Songti TC",Baskerville,serif;--sans:"PingFang TC","Helvetica Neue","Microsoft JhengHei",sans-serif;--ease:cubic-bezier(.22,.72,.22,1)}
+:root{--type-body:17px;--type-small:17px;--type-micro:16px;--type-reading:20px;--type-svg-body:18px;--type-svg-label:14px;--type-title:clamp(42px,calc(52vw / 10),80px);--type-hero:clamp(58px,7vw,108px);--paper:#f7f6f1;--ink:#11110f;--muted:#62625a;--line:#d6d4cc;--soft:#ecebe5;--signal:#d7ff38;--green:#285447;--serif:"Iowan Old Style","Songti TC",Baskerville,serif;--sans:"PingFang TC","Helvetica Neue","Microsoft JhengHei",sans-serif;--ease:cubic-bezier(.22,.72,.22,1)}
 *{box-sizing:border-box}html,body{height:100%;width:100%;margin:0;overflow:hidden}body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:calc(var(--type-body) + 1px);line-height:1.6}button{font:inherit;color:inherit;cursor:pointer;border:1px solid var(--line);background:transparent;border-radius:4px;padding:8px 15px;min-height:44px;touch-action:manipulation}button:hover{background:var(--soft)}button:focus-visible{outline:3px solid var(--green);outline-offset:4px}button:disabled{cursor:default}button:disabled:hover{background:transparent}[hidden]{display:none!important}
 .topbar{position:fixed;inset:0 0 auto;height:64px;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;border-bottom:1px solid var(--line);background:var(--paper)}.brand{font-family:var(--serif);font-size:22px}.topnav{display:flex;gap:8px}.topnav button{border:0;font-size:var(--type-micro);padding:6px 12px}.topnav button[aria-current=true]{background:var(--ink);color:var(--paper)}
 .deck{height:100%}.slide{position:absolute;inset:64px 0 68px;padding:28px 5vw;overflow:auto;visibility:hidden;opacity:0;transform:translateY(12px);transition:opacity .2s var(--ease),transform .2s var(--ease)}.slide.is-active{visibility:visible;opacity:1;transform:none}.shell{width:min(1240px,100%);min-height:100%;margin:auto;display:flex;flex-direction:column;gap:20px}.section-head h2{font-family:var(--serif);font-weight:500;font-size:var(--type-title);letter-spacing:-.035em;line-height:1.22;margin:0}.section-head p{margin:0 0 8px}.kicker{font-size:var(--type-micro);letter-spacing:.08em;color:var(--green);font-weight:700}.content{flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px}p{margin:0}strong{font-weight:650}mark{background:var(--signal);color:var(--ink);padding:0 4px}.muted{color:var(--muted)}.small{font-size:var(--type-small)}.micro{font-size:var(--type-micro)}.reading{font-size:var(--type-reading)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.card{border:1px solid var(--line);padding:22px;background:rgba(255,255,255,.28);border-radius:3px}.card h3{margin:0 0 12px;font-size:23px;line-height:1.3}.card p+p{margin-top:10px}.dark{background:var(--ink);color:var(--paper);border-color:var(--ink)}.dark .kicker{color:var(--signal)}.callout{border-left:3px solid var(--green);padding:10px 16px;background:#e8eee7}.quote{margin:0;padding:10px 16px;border-left:3px solid var(--green);background:var(--soft);font-size:var(--type-small)}.quote cite{font-size:var(--type-micro);font-style:normal;color:var(--muted);margin-right:10px}.quote strong{color:var(--green)}
@@ -87,7 +87,7 @@
 .big-matrix{table-layout:fixed;font-size:17px}.big-matrix th:first-child{width:25%}
 .big-matrix th{padding:10px 6px;line-height:1.35}.big-matrix td{height:120px;padding:10px 8px;line-height:1.4}
 .big-matrix td strong{display:block;font-size:32px;font-weight:650}.big-matrix td>span{display:block;font-size:16px;font-weight:400;margin-top:5px}
-.big-matrix .cell-term{font-size:13px}.big-matrix .tn{background:#f0f0eb}
+.big-matrix .cell-term{font-size:16px}.big-matrix .tn{background:#f0f0eb}
 .naming-steps p+p,.option-reasons p+p{margin-top:12px}.naming-steps h3{margin-top:8px}
 .names-stage .big-matrix td{height:150px}.names-stage button{margin-top:12px}
 .js-control,.wafer-live{display:none}.js .js-control{display:inline-block}.js .wafer-live{display:block}.js .wafer-static{display:none}
@@ -131,7 +131,7 @@
 .type-tag{display:inline-block;margin-top:6px;padding:2px 10px;background:var(--signal);color:var(--ink);font-size:var(--type-small);font-weight:700}
 .opt-orig{display:block;font-weight:400}
 .option-reasons p strong{color:var(--green)}
-.opt-review{margin-top:10px;border-top:1px solid var(--line);font-size:15px;line-height:1.45}
+.opt-review{margin-top:10px;border-top:1px solid var(--line);font-size:17px;line-height:1.4}
 .opt-row{display:grid;grid-template-columns:1.2fr 1fr;gap:4px 20px;padding:5px 8px;border-bottom:1px solid var(--line)}
 .opt-row.is-answer{background:#e8eee7}
 .opt-verdict{font-weight:700;color:var(--green)}
@@ -150,12 +150,13 @@
 .timeline{max-height:none!important}
 .dot-compare svg{height:188px!important}
 .dot-labels strong{display:inline!important;margin-right:8px}
-@media(min-width:901px) and (max-width:1100px){.dot-compare svg{height:165px!important}}
+@media(min-width:901px) and (max-width:1100px){.dot-compare svg{height:165px!important}.timeline{max-height:212px!important}}
 .budget-chart{max-height:105px!important}
 }
 .timeline .axis,.bar-svg .axis{font-size:17px!important}
 .dot-compare svg text{font-size:17px!important}
-.analysis .micro,.analysis .small.muted{font-size:15px}
+.micro,.axis-note,.cell-term{font-size:16px!important}
+.muted{font-size:max(1em,16px)}
 </style>
 <noscript><style>html,body{height:auto;overflow:visible}.deck{height:auto}.slide{position:relative;inset:auto;visibility:visible;opacity:1;transform:none;overflow:visible;margin:30px 0;min-height:650px}.topbar,.footer,.progress{display:none}.shell{min-height:0}</style></noscript>
 </head>
